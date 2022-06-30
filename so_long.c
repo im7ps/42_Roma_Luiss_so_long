@@ -6,26 +6,55 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:33:26 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/30 20:39:37 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 21:38:23 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void handle_map()
+char	**create_matrix(rows_num)
 {
-	char	*row; //matrice da riempire
-	// char	**map;
+	int 	fd;
+	char	**map;
+	int 	i;
 
-	int fd = open("./maps/map1.ber", O_RDONLY);
+	i = 0;
+	fd = open("./maps/map1.ber", O_RDONLY);
+	map = (char **) malloc (sizeof(char *) * (rows_num + 1));
+	while (rows_num--)
+	{
+		map[i] = get_next_line(fd, 1);
+		ft_printf("%s", map[i]);
+	}
+	return (map);
+}
+
+int count_rows()
+{
+	char	*row;
+	int		fd;
+	int		counter;
+
+	counter = 0;
+	fd = open("./maps/map1.ber", O_RDONLY);
 	row = get_next_line(fd, 1);
 	while (row != 0)
 	{
-		ft_printf("riga: %s", row);
-		// map[i] = (char *) malloc (sizeof(char) * (ft_strlen(row) + 1 ));
-		// ft_strlcpy(map[i], row, ft_strlen(row));
+		// ft_printf("riga: %s\n", row);
 		row = get_next_line(fd, 1);
+		counter++;
 	}
+	return (counter);
+}
+
+void handle_map()
+{
+	int		rows_num;
+	// char	**map;
+	// int		i = 0;
+
+	rows_num = count_rows();
+	create_matrix(rows_num);
 }
 
 void	moves_counter(void	*mlx_ptr, void	*win_ptr)
@@ -116,7 +145,6 @@ int	main(void)
 
 	mlx_ptr = initialize_pointer();
 	win_ptr = initialize_window(mlx_ptr);
-
 	draw_line(mlx_ptr, win_ptr, 0, 0, 1000, 700, 0xFFAAAA);
 	insert_image(mlx_ptr, win_ptr, 250, 250);
 	moves_counter(mlx_ptr, win_ptr);

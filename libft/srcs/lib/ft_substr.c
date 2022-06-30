@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 17:52:29 by sgerace           #+#    #+#             */
-/*   Updated: 2022/03/27 18:42:52 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:48:21 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,12 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 18:15:46 by sgerace           #+#    #+#             */
-/*   Updated: 2022/04/07 12:50:23 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:47:43 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
+#include	"../../includes/libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

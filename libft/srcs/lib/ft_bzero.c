@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 16:11:54 by sgerace           #+#    #+#             */
-/*   Updated: 2022/03/26 19:35:07 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:46:34 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

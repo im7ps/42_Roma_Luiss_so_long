@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 15:58:06 by sgerace           #+#    #+#             */
-/*   Updated: 2022/04/07 12:49:24 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:46:31 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 int	ft_atoi(const char *str)
 {

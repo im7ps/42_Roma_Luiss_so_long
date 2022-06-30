@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:41:07 by sgerace           #+#    #+#             */
-/*   Updated: 2022/04/07 12:49:47 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:46:46 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 int	ft_isprint(int c)
 {

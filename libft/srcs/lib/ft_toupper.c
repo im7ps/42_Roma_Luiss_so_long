@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 18:49:12 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/29 17:50:32 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:48:30 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 int	ft_toupper(int c)
 {

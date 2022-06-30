@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 14:50:03 by sgerace           #+#    #+#             */
-/*   Updated: 2022/04/03 14:52:36 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:47:02 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

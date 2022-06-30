@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 14:31:31 by sgerace           #+#    #+#             */
-/*   Updated: 2022/03/31 15:14:56 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:48:18 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

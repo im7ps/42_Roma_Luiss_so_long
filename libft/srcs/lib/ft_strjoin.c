@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 18:04:53 by sgerace           #+#    #+#             */
-/*   Updated: 2022/04/28 17:35:48 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:47:57 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 14:23:33 by sgerace           #+#    #+#             */
-/*   Updated: 2022/03/27 15:57:14 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:48:02 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {

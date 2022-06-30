@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 18:21:26 by sgerace           #+#    #+#             */
-/*   Updated: 2022/04/04 17:33:50 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:47:40 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"../../includes/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
