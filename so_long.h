@@ -6,7 +6,7 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 23:19:46 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/29 17:40:59 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 19:00:22 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 # include <math.h>
 # include <unistd.h>
 # include <fcntl.h>
-// # include "./libft/libft.h"
+# include "./libft/includes/libft.h"
+# include "./libft/includes/ft_printf.h"
+# include "./libft/includes/get_next_line.h"
 # include "mlx.h"
 
 void	*initialize_window(void	*mlx_ptr);
@@ -28,7 +30,5 @@ void	draw_line(void	*mlx_ptr, void	*win_ptr, int startX, \
 void	insert_image(void	*mlx_ptr, void	*win_ptr, int image_posX, \
 					int image_posY);
 void	moves_counter(void	*mlx_ptr, void	*win_ptr);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putchar_fd(char c, int fd);
 
 #endif

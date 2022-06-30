@@ -6,22 +6,26 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:33:26 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/29 20:16:13 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 20:39:37 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include "libft/includes/libft.h"
-#include "libft/includes/get_next_line.h"
-#include <stdio.h>
 
 void handle_map()
 {
-	char	*map;
+	char	*row; //matrice da riempire
+	// char	**map;
 
 	int fd = open("./maps/map1.ber", O_RDONLY);
-	map = get_next_line(fd, 1);
-	printf("mappa: %s", map);
+	row = get_next_line(fd, 1);
+	while (row != 0)
+	{
+		ft_printf("riga: %s", row);
+		// map[i] = (char *) malloc (sizeof(char) * (ft_strlen(row) + 1 ));
+		// ft_strlcpy(map[i], row, ft_strlen(row));
+		row = get_next_line(fd, 1);
+	}
 }
 
 void	moves_counter(void	*mlx_ptr, void	*win_ptr)

@@ -6,7 +6,7 @@
 #    By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 17:44:25 by dgioia            #+#    #+#              #
-#    Updated: 2022/06/29 20:19:06 by sgerace          ###   ########.fr        #
+#    Updated: 2022/06/30 17:03:30 by sgerace          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME= libft.a
 
 CC= gcc
 
-CFLAGS= -Wall -Werror -Wextra
+CFLAGS= -Wall -Werror -Wextra -g
 
 SRCDIR = srcs
 

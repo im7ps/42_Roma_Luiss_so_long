@@ -6,11 +6,11 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 18:23:34 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/29 18:57:46 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 17:23:27 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include	"../../includes/libft.h"
 
 char	*store_extra_char(char	*buffer)
 {

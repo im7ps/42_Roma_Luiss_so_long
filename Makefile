@@ -15,20 +15,20 @@ LIBFT = libft/libft.a
 RM		=	rm -rf
 
 %.o: %.c
-			$(CC) ${CFLAGS} -g -c $< -o $@
+			@($(CC) ${CFLAGS} -g -c $< -o $@)
 
 $(NAME):	$(OBJ)
-			make -C ./libft
-			make -C ./minilibx
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(MLX) $(LIBFT)
+			@make -C ./libft
+			@make -C ./minilibx
+			@($(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(MLX) $(LIBFT))
 
 all:		$(NAME)
 
 clean:
-			${RM} $(OBJ)
+			@(${RM} $(OBJ))
 
 fclean: 	clean
-			${RM} $(NAME) ${OBJ}
+			@(${RM} $(NAME) ${OBJ})
 
 re:			fclean all
 
