@@ -6,11 +6,29 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:33:26 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/30 21:38:23 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/06/30 22:04:24 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+int	check_map_errors(char	**map, int rows_num)
+{
+	int	tmp;
+	int	i;
+	int	j;
+
+	tmp = 0;
+	i = 0;
+	j = i + 1;
+	while (i < rows_num)
+	{
+		tmp = ft_strlen(map[i]);
+		tmp2 = ft_strlen(map[i]);
+		i++;
+	}
+	return (0);
+}
 
 char	**create_matrix(rows_num)
 {
@@ -24,7 +42,7 @@ char	**create_matrix(rows_num)
 	while (rows_num--)
 	{
 		map[i] = get_next_line(fd, 1);
-		ft_printf("%s", map[i]);
+		i++;
 	}
 	return (map);
 }
@@ -40,7 +58,6 @@ int count_rows()
 	row = get_next_line(fd, 1);
 	while (row != 0)
 	{
-		// ft_printf("riga: %s\n", row);
 		row = get_next_line(fd, 1);
 		counter++;
 	}
@@ -50,11 +67,11 @@ int count_rows()
 void handle_map()
 {
 	int		rows_num;
-	// char	**map;
-	// int		i = 0;
+	char	**map;
 
 	rows_num = count_rows();
-	create_matrix(rows_num);
+	map = create_matrix(rows_num);
+	check_map_errors(map, rows_num);
 }
 
 void	moves_counter(void	*mlx_ptr, void	*win_ptr)
