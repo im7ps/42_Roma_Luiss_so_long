@@ -6,72 +6,64 @@
 /*   By: sgerace <sgerace@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:33:26 by sgerace           #+#    #+#             */
-/*   Updated: 2022/06/30 22:04:24 by sgerace          ###   ########.fr       */
+/*   Updated: 2022/07/01 20:02:31 by sgerace          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	check_map_errors(char	**map, int rows_num)
+// int	check_map(char	**map, int rows_num)
+// {
+// 	int	tmp;
+// 	int	i;
+// 	int	j;
+
+// 	tmp = 0;
+// 	i = 0;
+// 	j = i + 1;
+// 	while (i < rows_num)
+// 	{
+// 		tmp = ft_strlen(map[i]);
+// 		tmp2 = ft_strlen(map[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
+
+char	**create_matrix()
 {
-	int	tmp;
-	int	i;
-	int	j;
-
-	tmp = 0;
-	i = 0;
-	j = i + 1;
-	while (i < rows_num)
-	{
-		tmp = ft_strlen(map[i]);
-		tmp2 = ft_strlen(map[i]);
-		i++;
-	}
-	return (0);
-}
-
-char	**create_matrix(rows_num)
-{
-	int 	fd;
-	char	**map;
-	int 	i;
-
-	i = 0;
-	fd = open("./maps/map1.ber", O_RDONLY);
-	map = (char **) malloc (sizeof(char *) * (rows_num + 1));
-	while (rows_num--)
-	{
-		map[i] = get_next_line(fd, 1);
-		i++;
-	}
-	return (map);
-}
-
-int count_rows()
-{
-	char	*row;
 	int		fd;
 	int		counter;
+	int		i;
+	char	*row;
+	char	**map;
 
 	counter = 0;
+	i = 0;
 	fd = open("./maps/map1.ber", O_RDONLY);
 	row = get_next_line(fd, 1);
-	while (row != 0)
+	while (row)
 	{
 		row = get_next_line(fd, 1);
 		counter++;
 	}
-	return (counter);
+	close(fd);
+	free(row);
+	fd = open("./maps/map1.ber", O_RDONLY);
+	map = (char **) malloc (sizeof(char *) * (counter + 1));
+	while (counter--)
+	{
+		map[i] = get_next_line(fd, 1);
+		ft_printf("%d\n", ft_strlen(map[i]));
+	}
+	return (map);
 }
 
 void handle_map()
 {
-	int		rows_num;
 	char	**map;
 
-	rows_num = count_rows();
-	map = create_matrix(rows_num);
-	check_map_errors(map, rows_num);
+	map = create_matrix();
 }
 
 void	moves_counter(void	*mlx_ptr, void	*win_ptr)
